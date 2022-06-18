@@ -5,7 +5,7 @@
 
 import unittest
 
-from pybox import pybox
+from pybox import Images
 
 
 class TestPybox(unittest.TestCase):
