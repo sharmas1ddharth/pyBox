@@ -19,3 +19,4 @@ def rename_to_numbers(dir_path, show=False):
         os.rename(f"{dir_path}/{f}", new_name)
         if show:
             print(f'Old: {f}, New: {new_name}')
+
