@@ -10,7 +10,7 @@ def rename_with(dir_path="", name="pybox"):
         f_name, f_ext = os.path.splitext(f)
         f_name = name + str(count)
         new_name = f'{f_name}{f_ext}'
-        os.rename(f"{dir_path}/{f}", new_name)
+        os.rename(f"{dir_path}/{f}", f"{dir_path}/{new_name}")
 
 
 def rename_to_numbers(dir_path="", show=False):
@@ -22,12 +22,10 @@ def rename_to_numbers(dir_path="", show=False):
         f_name, f_ext = os.path.splitext(f)
         f_name = str(count)
         new_name = f'{f_name}{f_ext}'
-        os.rename(f"{dir_path}/{f}", new_name)
+        os.rename(f"{dir_path}/{f}", f"{dir_path}/{new_name}")
         if show:
             print(f'Old: {f}, New: {new_name}')
 
-
-import os
 
 
 def remove_(path, type_):
