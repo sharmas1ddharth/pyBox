@@ -1,5 +1,5 @@
 import os
-
+import shutil
 
 def rename_with(dir_path="", name="pybox"):
     """rename all files with temp in front of file name"""
@@ -63,3 +63,17 @@ def search(name="", dir_name="", type_="file", remove=False, print_=True):
                     print(path)
                     if remove:
                         remove_(path, type_)
+
+
+def move(source, destination, num=0):
+    files = os.listdir(source)
+    n = 0
+    if num == 0:
+        num = len(files)
+    for file in files:
+        shutil.move(f"{source}/{file}", f"{destination}/{file}")
+        n += 1
+        if n == num:
+            break
+
+
